@@ -1,6 +1,8 @@
 <template>
-  <div v-for="obj in data" v-bind:key="obj.id">
-    teste {{obj.id}}
+  <div>
+    <label for="userName">Nome:</label>
+    <input type="text" v-model="name">
+    <p>{{name}}</p>
   </div>
 </template>
 
@@ -8,22 +10,9 @@
 
 export default {
   name: 'App',
-  components: {
-
-  },
   data() {
-    return{
-      data: [
-        {
-          "id":1
-        },
-        {
-          "id":2
-        },
-        {
-          "id":3
-        }
-      ]
+    return {
+      name:"jon jep"
     }
   }
 }
