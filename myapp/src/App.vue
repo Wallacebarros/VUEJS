@@ -1,8 +1,8 @@
 <template>
   <div>
-    <label for="userName">Nome:</label>
-    <input type="text" v-model="name">
-    <p>{{name}}</p>
+    <button @click="click()">
+      enviar
+    </button>
   </div>
 </template>
 
@@ -12,9 +12,14 @@ export default {
   name: 'App',
   data() {
     return {
-      name:"jon jep"
+
     }
-  }
+  },
+  methods: {
+    click() {
+      window.alert("teste")
+    }
+  },
 }
 </script>
 
