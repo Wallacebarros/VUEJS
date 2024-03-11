@@ -2,6 +2,10 @@
   <TheHeader
     v-show=status
   />
+  <div>
+    nome: {{firstName}} <br/>
+    sobrenome: {{lastName}}
+  </div>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
@@ -17,10 +21,10 @@ export default {
     TheHeader
   },
   data() {
-// v-show quando false tira o elemento da tela con o disply none
-// v-if qual false tira o elemento do codigo
     return{
       status: true,
+      firstName: "jon",
+      lastName: "jep"
     }
   }
 }
