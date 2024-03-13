@@ -1,29 +1,22 @@
 <template>
-  <input type="text" v-model="name">
-  <p>{{name}}</p>
-
+  <MyHeader>
+    <template v-slot:title>
+      <h1>titulo</h1>
+    </template>
+    <h1>Home</h1>
+    <p>paragrafo</p>
+  </MyHeader>
 </template>
+
 <script>
+  import MyHeader from './components/MyHeader.vue'
 
   export default {   
     name:'App',
-    data() {
-      return {
-        name:""
-      }
-    },
-    watch:{
-      name() {
-        this.pushApi()
-      }
-    },
-    methods: {
-      pushApi(){
-        console.log("fetch")
-      }
-    },
+    components:{ MyHeader }
   }
 </script>
+
 <style>
   body{ 
     margin: 0px;
