@@ -1,31 +1,25 @@
 <template>
-  <div>
-    <button @click="click()">
-      enviar
-    </button>
-  </div>
+  <p>{{fullName}}</p>
 </template>
-
 <script>
 
-export default {
-  name: 'App',
-  data() {
-    return {
-
+  export default {   
+    name: 'App',
+    data() {
+      return {
+        firstName:"Jonh",
+        lastName:"Jep"
+      }
+    },
+    computed: {
+      fullName() {
+        return `${this.firstName} ${this.lastName}`
+      }
     }
-  },
-  methods: {
-    click() {
-      window.alert("teste")
-    }
-  },
-}
+  }
 </script>
-
 <style>
-#app {
-  margin: 0px;
-  padding: 0px;
-}
+  body{ 
+    margin: 0px;
+  }
 </style>
