@@ -1,21 +1,27 @@
 <template>
-  <p>{{fullName}}</p>
+  <input type="text" v-model="name">
+  <p>{{name}}</p>
+
 </template>
 <script>
 
   export default {   
-    name: 'App',
+    name:'App',
     data() {
       return {
-        firstName:"Jonh",
-        lastName:"Jep"
+        name:""
       }
     },
-    computed: {
-      fullName() {
-        return `${this.firstName} ${this.lastName}`
+    watch:{
+      name() {
+        this.pushApi()
       }
-    }
+    },
+    methods: {
+      pushApi(){
+        console.log("fetch")
+      }
+    },
   }
 </script>
 <style>
