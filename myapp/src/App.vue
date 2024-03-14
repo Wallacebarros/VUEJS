@@ -1,24 +1,26 @@
 <template>
-  <MyHeader>
-    <template v-slot:title>
-      <h1>titulo</h1>
-    </template>
-    <h1>Home</h1>
-    <p>paragrafo</p>
-  </MyHeader>
+  <BaseAlert variant="success">
+    Seu e-mail foi enviado
+  </BaseAlert>
 </template>
 
 <script>
-  import MyHeader from './components/MyHeader.vue'
+  import BaseAlert from './components/BaseAlert.vue'
 
   export default {   
     name:'App',
-    components:{ MyHeader }
+    components:{
+      BaseAlert
+    }
   }
 </script>
 
 <style>
   body{ 
     margin: 0px;
+  }
+  #app {
+    margin-left: 30px;
+    margin-top: 30px;
   }
 </style>
