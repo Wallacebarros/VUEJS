@@ -1,6 +1,9 @@
 <template>
   <span :class="`alert ${getVariant}`">
     <slot/>
+    <button @click="onClick()">
+      X
+    </button>
   </span>
 </template>
 
@@ -10,6 +13,11 @@
     computed: {
       getVariant() {
         return this.variant ? `alert--${this.variant}` : '';
+      }
+    },
+    methods: {
+      onClick(){
+        this.$emit('delite')
       }
     },
   }
@@ -27,6 +35,13 @@
   }
   .alert--failed {
     background-color: red;
+    color: #fff;
+  }
+  button {
+    padding: 2px 6px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 6px;
     color: #fff;
   }
 </style>

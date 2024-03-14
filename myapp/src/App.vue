@@ -1,5 +1,9 @@
 <template>
-  <BaseAlert variant="success">
+  <BaseAlert 
+    variant="success" 
+    @delite="deliteFunc()"
+    v-if="showAlert"
+  >
     Seu e-mail foi enviado
   </BaseAlert>
 </template>
@@ -9,9 +13,19 @@
 
   export default {   
     name:'App',
+    data() {
+      return {
+        showAlert:true
+      }
+    },
     components:{
       BaseAlert
-    }
+    },
+    methods: {
+      deliteFunc(){
+        return this.showAlert = false
+      }
+    },
   }
 </script>
 
