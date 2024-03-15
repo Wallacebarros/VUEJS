@@ -3,13 +3,16 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     user: {
-      fist_name: 'Jhon',
+      first_name: 'Jhon',
       last_name: 'Jep',
     }
   },
   getters: {
   },
   mutations: {
+    alterar(state, newUser) {
+      state.user = newUser
+    } 
   },
   actions: {
   },
