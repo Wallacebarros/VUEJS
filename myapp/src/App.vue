@@ -1,40 +1,30 @@
 <template>
-  <BaseAlert 
-    variant="success" 
-    @delite="deliteFunc()"
-    v-if="showAlert"
-  >
-    Seu e-mail foi enviado
-  </BaseAlert>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/usuario/10">usuario</router-link>
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-  import BaseAlert from './components/BaseAlert.vue'
-
-  export default {   
-    name:'App',
-    data() {
-      return {
-        showAlert:true
-      }
-    },
-    components:{
-      BaseAlert
-    },
-    methods: {
-      deliteFunc(){
-        return this.showAlert = false
-      }
-    },
-  }
-</script>
-
 <style>
-  body{ 
-    margin: 0px;
-  }
-  #app {
-    margin-left: 30px;
-    margin-top: 30px;
-  }
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+}
+
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
