@@ -26,6 +26,9 @@ export default createStore({
     cart: []
   },
   getters: {
+    totalPrice(state) {
+      return state.cart.reduce( (total, value) => total + value.price, 0)
+    }
   },
   mutations: {
     alterar(state, newUser) {

@@ -6,6 +6,7 @@
       :product="product"
     />
   <h1>Carinho de compras</h1>
+  <p>preço total: {{ $store.getters.totalPrice }}</p>
     <AppCart
       v-for="product in $store.state.cart"
       :key="product.id"
