@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Product from '../components/Product/AppProducts.vue'
+import CompositionApi from '../views/CompositionApiView.vue'
 
 const routes = [
   {
@@ -8,9 +9,9 @@ const routes = [
     component: Product
   },
   {
-    path: '/usuario/:id',
-    name: 'usuario',
-    component: () => import('../views/UsuarioView.vue')
+    path: '/compositionApi',
+    name: 'compositionApi',
+    component: CompositionApi
   }
 ]
 

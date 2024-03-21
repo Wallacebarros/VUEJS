@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/usuario/10">usuario</router-link>
+    <router-link to="/compositionApi">composition Api</router-link>
   </nav>
   <router-view/>
 </template>
