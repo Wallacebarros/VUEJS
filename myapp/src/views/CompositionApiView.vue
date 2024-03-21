@@ -9,19 +9,19 @@
   </button>
 </template>
 <script>
-  import { reactive } from 'vue'
+  import { ref } from 'vue'
   
   export default {
     setup() {
       const name = 'Jhon Jep'
       
-      const user = reactive({
+      const user = ref({
         firts_name:'Jhon',
         last_name:'Jep'
       })
 
       const changeLastName = ()=>{
-        user.last_name = 'new last name'
+        user.value.last_name = 'new last name'
       }
       return {
         name,
